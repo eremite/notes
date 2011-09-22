@@ -61,6 +61,10 @@
 
     tar -czf filename.tar.gz directory
 
+## Renew dhcp lease
+
+    sudo dhclient -r && sudo dhclient
+
 ## Set up a new server
 
     vim ~/.ssh/config
