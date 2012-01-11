@@ -44,9 +44,18 @@
 
 ## Add git submodule
 
-    git submodule add git://github.com/stephskardal/extension1.git extension
+    git submodule add git://github.com/user/submodule.git extension
     git submodule init
 
+## Remove git submodule
+
+    http://stackoverflow.com/questions/1260748/how-do-i-remove-a-git-submodule
+    * Delete the relevant line from the .gitmodules file.
+    * Delete the relevant section from .git/config.
+    * Run git rm --cached path_to_submodule (no trailing slash).
+    * Commit and delete the now untracked submodule files.
+
+    
 ## Install submodule on a new super project
 
     git submodule init
