@@ -77,13 +77,10 @@
     sudo chmod -R g+s $APP.git
 
     # In the directory of the code
-    APP=myapp
-    cd $APP
     git init
-    # vim .gitignore
     git add .
     git commit -m "Initial commit"
-    git remote add origin ssh://git.custombit.com/var/repos/$APP.git
+    git remote add origin ssh://git.custombit.com/var/repos/${PWD##*/}.git
     git config --add branch.master.remote origin
     git config --add branch.master.merge refs/heads/master
     git push origin master
