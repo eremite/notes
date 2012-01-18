@@ -63,18 +63,17 @@
 
 ## New Repo Walkthrough
 
-    http://wiki.mokisystems.com/development:source_control_using_git
-    ssh git.mokisystems.com
+    ssh git.custombit.com
     cd /var/repos
     APP=myapp
     mkdir $APP.git
     cd !$
     git --bare init
     echo "My App Name" > description
-    ln -s /var/repos/post-receive-email hooks/post-receive
+    ln -s /var/repos/post-receive-hook hooks/post-receive
     find objects -type d -exec chmod 02770 {} \;
     cd ..
-    sudo chown -R :moki $APP.git
+    sudo chown -R :staff $APP.git
     sudo chmod -R g+s $APP.git
 
     # In the directory of the code
@@ -84,7 +83,7 @@
     # vim .gitignore
     git add .
     git commit -m "Initial commit"
-    git remote add origin ssh://git.mokisystems.com/var/repos/$APP.git
+    git remote add origin ssh://git.custombit.com/var/repos/$APP.git
     git config --add branch.master.remote origin
     git config --add branch.master.merge refs/heads/master
     git push origin master
