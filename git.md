@@ -101,3 +101,7 @@
 ## Upgrading all submodules
 
     git submodule foreach git pull origin master
+
+## Save a packaged archive
+
+    git archive -o ~/output_file.tar.gz
