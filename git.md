@@ -104,4 +104,4 @@
 
 ## Save a packaged archive
 
-    git archive -o ~/output_file.tar.gz
+    git archive -o ~/output_file.zip master
