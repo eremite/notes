@@ -105,3 +105,8 @@
 ## Save a packaged archive
 
     git archive -o ~/output_file.zip master
+    
+## Delete a remote branch
+
+    # http://gitready.com/beginner/2009/02/02/push-and-delete-branches.html
+    git push origin :deleted_branch
