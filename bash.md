@@ -76,3 +76,8 @@
     exit
     ssh-copy-id $SERVER #make sure /home/daniel is not group writable.
     sync_server_dotfiles $SERVER
+
+## Edit iptables
+
+    sudo vim /etc/iptables.rules
+    sudo iptables-restore < /etc/iptables.rules
