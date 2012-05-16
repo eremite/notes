@@ -22,7 +22,7 @@
 ## Load database
 
     gunzip -f db.sql.gz
-      mysql -uroot $db < db.sql
+    mysql -uroot $db < db.sql
 
 ## Load data infile
 
@@ -31,3 +31,8 @@
     (field1, filed2, field3);
     #FIELDS TERMINATED BY '\t' ENCLOSED BY '' ESCAPED BY '\\'
     #LINES TERMINATED BY '\n' STARTING BY ''
+
+## View console results in less
+
+    # http://stackoverflow.com/questions/924729/mysql-select-many-fields-how-best-to-display-in-terminal#6422698
+    pager less -SFX
