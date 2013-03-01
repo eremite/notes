@@ -110,3 +110,8 @@
 
     # http://gitready.com/beginner/2009/02/02/push-and-delete-branches.html
     git push origin :deleted_branch
+
+## Show the history of a file
+
+    # http://www.readysetrails.com/index.php/2111/5-mistakes-that-make-you-look-like-a-rails-n00b/
+    git whatchanged -p --abbrev-commit --pretty=medium
