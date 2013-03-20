@@ -46,8 +46,8 @@
 
 ## Run something so that logging out won't kill it
 
-    $(ruby some.long.running.application &)
-
+    nohup bundle exec rake db:set_unit_names >> log/unit_names.log 2>&1 &
+    
 ## Remove Old Kernels
 
     ls /boot/ | grep vmlinuz | sed 's@vmlinuz-@linux-image-@g' | grep -v `uname -r`
