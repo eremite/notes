@@ -28,9 +28,9 @@
 ## Releasing a new version
 
     git tag -l
-    git log --no-merges --abbrev-commit --pretty=oneline v1.6.. > release.txt
-    v release.txt # AMAPS Software v1.6 Release Notes
-    git tag -a v1.7.27 -F release.txt
+    git log --no-merges --abbrev-commit --pretty=oneline $(git tag -l | tail -n 1).. > release.txt
+    # edit release.txt
+    git tag -a v2.0 -F release.txt
     git push --tags
 
 ## What is new since stable?
