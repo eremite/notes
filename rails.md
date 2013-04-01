@@ -1,7 +1,7 @@
 # Notes on rails
 
 ## Paste into console to pretend to download all uploaded iamges
-    site_path = "http://www.es2eng.com"
+    site_path = "http://www.example.com"
     [
       [Photo, :image],
     ].each do |klass, method|
@@ -20,3 +20,9 @@
         end
       end
     end
+
+
+## SELECT DISTINCT field from Model
+    Model.uniq.pluck(:field)
+    Model.find(:all, :select => 'DISTINCT field').map(&:field)
+
