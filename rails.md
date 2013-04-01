@@ -26,3 +26,5 @@
     Model.uniq.pluck(:field)
     Model.find(:all, :select => 'DISTINCT field').map(&:field)
 
+# Change hash to query string
+    {:a => 1}.to_query
