@@ -115,3 +115,9 @@
 
     # http://www.readysetrails.com/index.php/2111/5-mistakes-that-make-you-look-like-a-rails-n00b/
     git whatchanged -p --abbrev-commit --pretty=medium
+
+## Show a diff of a stash
+
+```bash
+git stash show -p
+```
