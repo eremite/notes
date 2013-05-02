@@ -27,11 +27,14 @@
 
 ## Releasing a new version
 
-    git tag -l
-    git log --no-merges --abbrev-commit --pretty=oneline $(git tag -l | tail -n 1).. > release.txt
-    # edit release.txt
-    git tag -a v2.0 -F release.txt
-    git push --tags
+```bash
+git tag -l
+git log --no-merges --abbrev-commit --pretty=oneline $(git tag -l | tail -n 1).. > release.txt
+# edit release.txt
+git tag -a v2.0 -F release.txt
+git tag -a v$(date +"%Y.%m.%d") -F release.txt
+git push --tags
+```
 
 ## What is new since stable?
 
