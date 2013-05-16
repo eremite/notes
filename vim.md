@@ -35,7 +35,7 @@ Edit it
 Copy it back: 0"ay$ 
 ```
 
-## Delete all buffers except the current one
+## Close all buffers except the current one
 
 ```VimL
 :bd|b#
