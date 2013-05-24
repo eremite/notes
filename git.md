@@ -161,3 +161,9 @@ git whatchanged -p --abbrev-commit --pretty=medium
 ```bash
 git stash show -p
 ```
+
+## Include diff when writing commit message
+
+```bash
+git commit -v
+```
