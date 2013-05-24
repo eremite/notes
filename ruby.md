@@ -16,3 +16,13 @@ Benchmark.bm do |bm|
   bm.report('second:') { 1 == 2 || 2 == 2 }
 end;0
 ```
+
+## Install a brand new ruby
+
+(With brew and rbenv.)
+
+```bash
+brew install --HEAD ruby-build # Update ruby-build
+rbenv install --list # See available versions
+rbenv install 3.0.0
+```
