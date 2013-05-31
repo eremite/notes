@@ -17,12 +17,11 @@ Benchmark.bm do |bm|
 end;0
 ```
 
-## Install a brand new ruby
-
-(With brew and rbenv.)
+## Installing a ruby (with brew and rbenv)
 
 ```bash
 brew install --HEAD ruby-build # Update ruby-build
 rbenv install --list # See available versions
 rbenv install 3.0.0
+CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl) --with-readline-dir=$(brew --prefix readline)" rbenv install 2.0.0-p195 # with options
 ```
