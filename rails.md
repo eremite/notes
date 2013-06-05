@@ -1,6 +1,6 @@
 # Notes on rails
 
-## Paste into console to pretend to download all uploaded iamges
+## Paste into console to pretend to download all uploaded images
 
 ```ruby
 site_path = "http://www.example.com"
