@@ -1,4 +1,4 @@
-# Notes on rails
+# Notes on Ruby on Rails
 
 ## Paste into console to pretend to download all uploaded images
 
@@ -31,8 +31,14 @@ Model.uniq.pluck(:field)
 Model.find(:all, :select => 'DISTINCT field').map(&:field)
 ```
 
-# Change hash to query string
+## Change hash to query string
 
 ```ruby
 { :a => 1 }.to_query
+```
+
+## Rollback a migration
+
+```bash
+rake db:rollback STEP=2
 ```
