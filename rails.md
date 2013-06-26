@@ -42,3 +42,9 @@ Model.find(:all, :select => 'DISTINCT field').map(&:field)
 ```bash
 rake db:rollback STEP=2
 ```
+
+## Include vs Joins
+
+> When you join comments, you are asking for posts that have comments- an inner join by default. When you include comments, you are asking for all posts- an outer join.
+
+http://stackoverflow.com/a/4315729/167369
