@@ -50,3 +50,11 @@ INTO TABLE test_table
 # http://stackoverflow.com/questions/924729/mysql-select-many-fields-how-best-to-display-in-terminal#6422698
 pager less -SFX
 ```
+
+## Include vs Joins
+
+> When you join comments, you are asking for posts that have comments- an inner join by default. When you include comments, you are asking for all posts- an outer join.
+
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
+http://stackoverflow.com/a/4315729/167369
