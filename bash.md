@@ -18,6 +18,13 @@ df -h
 ```bash
 find . -type f | wc -l
 ```
+## Recursively find all files with a given extension
+
+(I can never remember `find` syntax.)
+
+```bash
+find . -name *.rabl
+```
 
 ## Sum the numbers in the first | delimited column in list.txt
 
