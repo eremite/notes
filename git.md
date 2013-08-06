@@ -167,3 +167,17 @@ git stash show -p
 ```bash
 git commit -v
 ```
+
+## Pull Requests
+
+```bash
+git checkout -b new_feature
+#make your commits
+git push -u origin new_feature
+
+# To get someone else's remote branch
+git fetch origin
+git checkout --track origin/another_feature
+```
+
+Log in to github and compare the branches and create a pull request.
