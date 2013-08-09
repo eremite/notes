@@ -37,6 +37,7 @@
 * Numlock on external keyboard doesn't work as I'd expect
 * No middle click with magic mouse (and no cusotmization options)
 * No fewer bugs than other OSes.
+* Have to mess with $PATH way more than on Linux
 
 ## Apps
 
