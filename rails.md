@@ -57,3 +57,14 @@ options = {
   :all_after_pass => false,
 }
 ```
+
+## Disable SQL logging in the console
+
+http://stackoverflow.com/questions/7759321/disable-rails-3-1-sql-logging#answer-7760140
+
+```ruby
+old_logger = ActiveRecord::Base.logger
+ActiveRecord::Base.logger = nil
+# Do some stuff
+ActiveRecord::Base.logger = old_logger
+```
