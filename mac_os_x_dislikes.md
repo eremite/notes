@@ -38,6 +38,7 @@
 * No middle click with magic mouse (and no cusotmization options)
 * No fewer bugs than other OSes.
 * Have to mess with $PATH way more than on Linux
+* Itunes is considered an important OS update
 
 ## Apps
 
