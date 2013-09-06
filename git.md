@@ -181,3 +181,9 @@ git checkout --track origin/another_feature
 ```
 
 Log in to github and compare the branches and create a pull request.
+
+## Set default heroku app
+
+```bash
+git config heroku.remote staging
+```
