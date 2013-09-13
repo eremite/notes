@@ -8,15 +8,12 @@
 :Ggrep -w word app/views/
 ```
 
-## Pathogen
-
-[Vimcast](http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen)
-
-### Install a plugin
+### Install a Pathogen plugin
 
 ```bash
 git submodule add git://github.com/user/plugin vim/bundle/plugin
 git submodule init
+vim .gitmodules #add `ignore = untracked` to ignore doc/tags
 ```
 
 ### Update all plugins
