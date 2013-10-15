@@ -187,3 +187,9 @@ Log in to github and compare the branches and create a pull request.
 ```bash
 git config heroku.remote staging
 ```
+
+## Checkout a remote branch
+
+```bash
+git checkout --track remote_name/remote_branch_name -b local_branch_name
+```
