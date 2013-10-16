@@ -44,6 +44,7 @@
 
 * The app store has never had anything I've wanted.
 * No office suite preinstalled.
+* Am I supposed to organize my downloaded *.app files myself? (What is this? Windows?!) 
 * Finder: home isn't in your favorites list by default
 * Spotlight: If you type 'Finder' the Finder is not an option.
 * Chrome: Can't change tabs with scroll wheel.
