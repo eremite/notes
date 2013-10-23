@@ -39,7 +39,7 @@
 * No fewer bugs than other OSes.
 * Have to mess with $PATH way more than on Linux
 * Itunes is considered an important OS update
-* I really hate when the window isn't brought forward when I alt-tab to an app.
+* I *still* find it really confusing to alt-tab to an app with all windows minimized. The only way to unminimize is to use the mouse to select from the menu?!
 
 ## Apps
 
