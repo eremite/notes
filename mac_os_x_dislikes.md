@@ -55,7 +55,6 @@
 ## It's not Linux
 
 * Activity monitor widget is quite lame
-* Can't click on links in the terminal (iTerm)
 * No readline
 * rgrep not preinstalled
 * Doesn't autoload ~/bin
