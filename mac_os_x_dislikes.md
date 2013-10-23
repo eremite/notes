@@ -39,6 +39,7 @@
 * No fewer bugs than other OSes.
 * Have to mess with $PATH way more than on Linux
 * Itunes is considered an important OS update
+* I really hate when the window isn't brought forward when I alt-tab to an app.
 
 ## Apps
 
