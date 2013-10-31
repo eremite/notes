@@ -40,3 +40,11 @@ Copy it back: 0"ay$
 ```VimL
 :bd|b#
 ```
+
+## Netrw (vim's built-in file browsing) 
+
+`:help netrw-quickmap`
+
+* `%` - New file
+* `d` - New directory
+* `R` - Rename
