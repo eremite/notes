@@ -193,3 +193,9 @@ git config heroku.remote staging
 ```bash
 git checkout --track remote_name/remote_branch_name -b local_branch_name
 ```
+
+## Back out of a conflicted merge
+
+```bash
+git merge --abort
+```
