@@ -199,3 +199,10 @@ git checkout --track remote_name/remote_branch_name -b local_branch_name
 ```bash
 git merge --abort
 ```
+
+## Push a new local branch to remote
+
+```bash
+# http://stackoverflow.com/questions/2765421
+git push -u origin mynewfeature
+```
