@@ -32,7 +32,7 @@
 * Can't change volume by hovering over the sound icon and scrolling your mouse wheel (have to click).
 * After downloading and installing something, you don't know what to do next to run it.
 * It won't let you run stuff you download and install until you track it down and command click it.
-* back/forward buttons don't work on external mouse
+* back/forward buttons don't work on external (non Mac) mouse
 * Home doesn't work on external keyboard
 * Numlock on external keyboard doesn't work as I'd expect
 * No middle click with magic mouse (and no cusotmization options)
@@ -61,7 +61,14 @@
 * Doesn't autoload ~/bin
 * Scroll doesn't work in terminal vim
 
+## Buggy
+
+* Sometimes it gets really hot while sleeping and drains the battery
+* Sometimes it loses half my windows when waking from sleep and plugging in a monitor
+* Sometimes it takes a long time to switch networks after sleeping
+
 # Likes
 
 * Nice hardware (Macbook Pro).
 * I can have 3 monitors without fighting with xorg.
+* Plays well with other Mac stuff if draconian policies force everyone that way.
