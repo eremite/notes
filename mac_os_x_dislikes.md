@@ -66,6 +66,7 @@
 * Sometimes it gets really hot while sleeping and drains the battery
 * Sometimes it loses half my windows when waking from sleep and plugging in a monitor
 * Sometimes it takes a long time to switch networks after sleeping
+* Sometimes the external monitor doesn't wake from sleep
 
 # Likes
 
