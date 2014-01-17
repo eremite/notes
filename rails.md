@@ -58,13 +58,14 @@ options = {
 }
 ```
 
-## Disable SQL logging in the console
+## SQL logging in the console
 
-http://stackoverflow.com/questions/7759321/disable-rails-3-1-sql-logging#answer-7760140
+http://stackoverflow.com/questions/1344232#answer-1576221
 
 ```ruby
-old_logger = ActiveRecord::Base.logger
+# Turn SQL logging *on* in Rails 2
+ActiveRecord::Base.connection.instance_variable_set :@logger, Logger.new(STDOUT)
+
+# Turn SQL logging *off* in Rails 3
 ActiveRecord::Base.logger = nil
-# Do some stuff
-ActiveRecord::Base.logger = old_logger
 ```
