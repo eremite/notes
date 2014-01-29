@@ -1,5 +1,11 @@
 # postgres notes
 
+## Dump
+
+```bash
+pg_dump --clean --no-owner --username=db_user db_name | gzip -c > ~/db.sql.gz
+```
+
 ## Kill all connections
 
 To fix "PGError: ERROR:  database "name_of_database" is being accessed by other users"
