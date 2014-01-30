@@ -50,3 +50,11 @@ INTO TABLE test_table
 # http://stackoverflow.com/questions/924729/mysql-select-many-fields-how-best-to-display-in-terminal#6422698
 pager less -SFX
 ```
+
+## Show count of rows for each table
+
+http://stackoverflow.com/questions/286039
+
+```sql
+SELECT table_name, TABLE_ROWS FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'database_name';
+```
