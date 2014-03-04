@@ -51,6 +51,14 @@ INTO TABLE test_table
 pager less -SFX
 ```
 
+## Show results vertically
+
+Use `\G` instead of `;`:
+
+```sql
+SELECT * FROM tables\G
+```
+
 ## Show count of rows for each table
 
 http://stackoverflow.com/questions/286039
