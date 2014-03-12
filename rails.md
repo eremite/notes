@@ -28,7 +28,7 @@ end
 
 ```ruby
 Model.uniq.pluck(:field)
-Model.find(:all, :select => 'DISTINCT field').map(&:field)
+Model.scoped(:select => 'DISTINCT field').map(&:field)
 ```
 
 ## Change hash to query string
