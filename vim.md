@@ -32,6 +32,12 @@ Edit it
 Copy it back: 0"ay$ 
 ```
 
+## Show full path of current file
+
+```VimL
+:echo expand('%:p')
+```
+
 ## Close all buffers except the current one
 
 ```VimL
