@@ -31,3 +31,12 @@ CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl) --with-readline-dir=
 ```bash
 gem list | cut -d" " -f1 | xargs gem uninstall -aIx
 ```
+
+## Reuse YAML block
+
+```yaml
+DEFAULTS: &DEFAULTS
+  password_digest: 4bf32ea4c909968aed72131cebf20d08d3a6d0ca
+base:
+  <<: *DEFAULTS
+```
