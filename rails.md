@@ -31,6 +31,15 @@ Model.uniq.pluck(:field)
 Model.scoped(:select => 'DISTINCT field').map(&:field)
 ```
 
+## Records with or without associations
+
+http://stackoverflow.com/a/19080147
+
+```ruby
+Person.includes(:friends).where('friends.person_id IS NOT NULL')
+Person.includes(:friends).where(:friends => { :person_id => nil })
+```
+
 ## Change hash to query string
 
 ```ruby
