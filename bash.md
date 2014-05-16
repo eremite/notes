@@ -122,3 +122,9 @@ sync_server_dotfiles $SERVER
 sudo vim /etc/iptables.rules
 sudo iptables-restore < /etc/iptables.rules
 ```
+
+## Grep installed packages
+
+```bash
+dpkg --get-selections | grep pattern
+```
