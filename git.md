@@ -49,34 +49,37 @@ gco master
 git log --no-merges --abbrev-commit --pretty=format:"* %s" stable.. | awk '{gsub(/refs/,"see");print}'
 ```
 
-## Git Submodules: What is the Ideal Workflow?
+## Git Submodules
 
-```bash
-http://blog.endpoint.com/2010/04/git-submodule-workflow.html
-```
+[What is the Ideal Workflow?](http://blog.endpoint.com/2010/04/git-submodule-workflow.html)
 
-## Add git submodule
+### Add git submodule
 
 ```bash
 git submodule add git://github.com/user/submodule.git extension
 git submodule init
 ```
 
-## Remove git submodule
+### Remove git submodule
 
-```
 http://stackoverflow.com/questions/1260748/how-do-i-remove-a-git-submodule
+
 * Delete the relevant line from the .gitmodules file.
 * Delete the relevant section from .git/config.
 * Run git rm --cached path_to_submodule (no trailing slash).
 * Commit and delete the now untracked submodule files.
-```
-    
-## Install submodule on a new super project
+
+### Install submodule on a new super project
 
 ```bash
 git submodule init
 git submodule update
+```
+
+### Upgrading all submodules
+
+```bash
+git submodule foreach git pull origin master
 ```
 
 ## New Repo Walkthrough
@@ -111,43 +114,10 @@ git push origin master
 git checkout @{"1 hour ago"}
 ```
 
-## Upgrading all submodules
-
-```bash
-git submodule foreach git pull origin master
-```
-
 ## Save a packaged archive
 
 ```bash
 git archive -o ~/output_file.zip master
-```
-
-## Shows how branches will be pushed
-
-```bash
-git remote show origin
-```
-
-
-## Rename a Branch
-
-```bash
-git branch -m old_branch new_branch
-```
-
-## Set default branch
-
-```bash
-git config --add branch.master.remote origin
-git config --add branch.master.merge refs/heads/master
-```
-
-## Delete a remote branch
-
-```bash
-# http://gitready.com/beginner/2009/02/02/push-and-delete-branches.html
-git push origin :deleted_branch
 ```
 
 ## Show the history of a file
@@ -222,4 +192,12 @@ http://stackoverflow.com/questions/2765421
 
 ```bash
 git push -u origin mynewfeature
+```
+
+### Delete a remote branch
+
+http://gitready.com/beginner/2009/02/02/push-and-delete-branches.html
+
+```bash
+git push origin :deleted_branch
 ```
