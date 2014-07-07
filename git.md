@@ -24,12 +24,6 @@ git clean -f
 git reset --soft HEAD^
 ```
 
-## Shows how branches will be pushed
-
-```bash
-git remote show origin
-```
-
 ## Making and using a patch
 
 ```bash
@@ -117,6 +111,25 @@ git push origin master
 git checkout @{"1 hour ago"}
 ```
 
+## Upgrading all submodules
+
+```bash
+git submodule foreach git pull origin master
+```
+
+## Save a packaged archive
+
+```bash
+git archive -o ~/output_file.zip master
+```
+
+## Shows how branches will be pushed
+
+```bash
+git remote show origin
+```
+
+
 ## Rename a Branch
 
 ```bash
@@ -128,18 +141,6 @@ git branch -m old_branch new_branch
 ```bash
 git config --add branch.master.remote origin
 git config --add branch.master.merge refs/heads/master
-```
-
-## Upgrading all submodules
-
-```bash
-git submodule foreach git pull origin master
-```
-
-## Save a packaged archive
-
-```bash
-git archive -o ~/output_file.zip master
 ```
 
 ## Delete a remote branch
@@ -188,21 +189,37 @@ Log in to github and compare the branches and create a pull request.
 git config heroku.remote staging
 ```
 
-## Checkout a remote branch
+## Branch Cheatsheet
+
+### Show how branches will be pushed
+
+```bash
+git remote show origin
+```
+
+### Set default branches
+
+```bash
+git config --add branch.master.remote origin
+git config --add branch.master.merge refs/heads/master
+```
+
+### Rename a Branch
+
+```bash
+git branch -m old_branch new_branch
+```
+
+### Checkout a remote branch
 
 ```bash
 git checkout --track remote_name/remote_branch_name -b local_branch_name
 ```
 
-## Back out of a conflicted merge
+### Push a new local branch to remote
+
+http://stackoverflow.com/questions/2765421
 
 ```bash
-git merge --abort
-```
-
-## Push a new local branch to remote
-
-```bash
-# http://stackoverflow.com/questions/2765421
 git push -u origin mynewfeature
 ```
