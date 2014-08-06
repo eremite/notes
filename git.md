@@ -183,6 +183,7 @@ git branch -m old_branch new_branch
 ### Checkout a remote branch
 
 ```bash
+git checkout -b branch origin/branch
 git checkout --track remote_name/remote_branch_name -b local_branch_name
 ```
 
