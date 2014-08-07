@@ -78,3 +78,9 @@ ActiveRecord::Base.connection.instance_variable_set :@logger, Logger.new(STDOUT)
 # Turn SQL logging *off* in Rails 3
 ActiveRecord::Base.logger = nil
 ```
+
+## Migrate to the last migration on the master branch
+
+```bash
+bundle exec rake db:migrate VERSION=`git ls-tree --name-only --full-tree master:db/migrate | tail -n1`
+```
