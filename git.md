@@ -24,6 +24,12 @@ git clean -f
 git reset --soft HEAD^
 ```
 
+## Reset to master (Undo a merge commit)
+
+```
+git reset --hard origin/master
+```
+
 ## Making and using a patch
 
 ```bash
