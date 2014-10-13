@@ -84,3 +84,10 @@ ActiveRecord::Base.logger = nil
 ```bash
 bundle exec rake db:migrate VERSION=`git ls-tree --name-only --full-tree master:db/migrate | tail -n1`
 ```
+
+## List all rake tasks
+
+```
+rake -T # those with descriptions
+rake -P # all
+```
