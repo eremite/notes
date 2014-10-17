@@ -79,6 +79,12 @@ ActiveRecord::Base.connection.instance_variable_set :@logger, Logger.new(STDOUT)
 ActiveRecord::Base.logger = nil
 ```
 
+## Execute an arbitrary SQL query
+
+```ruby
+ActiveRecord::Base.connection.exec_query('describe wires')
+```
+
 ## Migrate to the last migration on the master branch
 
 ```bash
