@@ -16,3 +16,11 @@
 ```bash
 =
 ```
+
+## Kill server
+
+You'll have to stop running processes by hand.
+
+```bash
+:kill-server
+```
