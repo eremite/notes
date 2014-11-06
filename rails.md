@@ -97,3 +97,25 @@ bundle exec rake db:migrate VERSION=`git ls-tree --name-only --full-tree master:
 rake -T # those with descriptions
 rake -P # all
 ```
+
+## Starting a new project (with Docker)
+
+```bash
+APP=appname
+mkdir $APP
+cd $APP
+git init
+mkdir -p $META/$APP/symlinks/.git
+mv .git/config $META/$APP/symlinks/.git/
+.git/hooks/create_symlinks
+
+docker run --rm -v $(pwd):/usr/src/$APP rails rails new /usr/src/$APP
+
+git add .
+git commit -m "Initial commit of bare Rails app."
+
+cp $META/templates/dockerignore .dockerignore
+cp $META/templates/fig.yml .
+cp $META/templates/Dockerfile .
+cp $META/templates/database.yml .
+```
