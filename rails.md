@@ -106,6 +106,7 @@ mkdir $APP
 cd $APP
 git init
 mkdir -p $META/$APP/symlinks/.git
+touch $META/$APP/symlinks/notes.md
 mv .git/config $META/$APP/symlinks/.git/
 .git/hooks/create_symlinks
 
