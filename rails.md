@@ -117,5 +117,5 @@ git commit -m "Initial commit of bare Rails app."
 cp $META/templates/dockerignore .dockerignore
 cp $META/templates/fig.yml .
 cp $META/templates/Dockerfile .
-cp $META/templates/database.yml .
+cp $META/templates/database.yml config/
 ```
