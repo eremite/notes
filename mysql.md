@@ -66,3 +66,11 @@ http://stackoverflow.com/questions/286039
 ```sql
 SELECT table_name, TABLE_ROWS FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'database_name';
 ```
+
+## List all users
+
+http://stackoverflow.com/questions/1135245
+
+```sql
+select User,Host from mysql.user;
+```
