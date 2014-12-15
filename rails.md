@@ -102,16 +102,21 @@ rake -P # all
 
 ```bash
 APP=appname
-mkdir $APP
-cd $APP
+
+#docker run --rm -v $(pwd):/usr/src/$APP rails rails new /usr/src/$APP
+docker run --rm -it -e APP=$APP --volumes-from data rails bash --login
+gem install rails:4.2.0.beta4
+cd /data
+/usr/local/bundle/gems/railties-4.2.0.beta4/bin/rails new
+exit
+
+cd /data/$APP
+sudo chown -R dev:dev .
 git init
 mkdir -p $META/$APP/symlinks/.git
 touch $META/$APP/symlinks/notes.md
 mv .git/config $META/$APP/symlinks/.git/
 .git/hooks/create_symlinks
-
-#docker run --rm -v $(pwd):/usr/src/$APP rails rails new /usr/src/$APP
-docker run --rm --volumes-from data rails rails new /data/$APP
 
 git add .
 git commit -m "Initial commit of bare Rails app."
