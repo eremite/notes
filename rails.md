@@ -110,7 +110,8 @@ touch $META/$APP/symlinks/notes.md
 mv .git/config $META/$APP/symlinks/.git/
 .git/hooks/create_symlinks
 
-docker run --rm -v $(pwd):/usr/src/$APP rails rails new /usr/src/$APP
+#docker run --rm -v $(pwd):/usr/src/$APP rails rails new /usr/src/$APP
+docker run --rm --volumes-from data rails rails new /data/$APP
 
 git add .
 git commit -m "Initial commit of bare Rails app."
