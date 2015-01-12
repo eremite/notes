@@ -128,3 +128,10 @@ sudo iptables-restore < /etc/iptables.rules
 ```bash
 dpkg --get-selections | grep pattern
 ```
+
+## Password protect a file
+
+```bash
+gpg -c db.sql.gz # encrypt
+pgp -d db.sql.gz.gpg # decrypt
+```
