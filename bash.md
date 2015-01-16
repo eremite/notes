@@ -137,11 +137,12 @@ pgp -d db.sql.gz.gpg # decrypt
 ```
 
 ## Restart delayed jobs based on current directory
+
 ```sh
 function rsdj {
   if [ $(basename `pwd`) == 'devstorage' ]; then
     sudo monit delayed_job_staging restart
-  elif
+  elif [ $(basename `pwd`) == 'storageunitsoftware' ]; then
     sudo monit -g delayed_job_production restart
   else
     echo 'delayed_jobs restart: Production or staging?'
