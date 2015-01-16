@@ -135,3 +135,16 @@ dpkg --get-selections | grep pattern
 gpg -c db.sql.gz # encrypt
 pgp -d db.sql.gz.gpg # decrypt
 ```
+
+## Restart delayed jobs based on current directory
+```sh
+function rsdj {
+  if [ $(basename `pwd`) == 'devstorage' ]; then
+    sudo monit delayed_job_staging restart
+  elif
+    sudo monit -g delayed_job_production restart
+  else
+    echo 'delayed_jobs restart: Production or staging?'
+  fi
+}
+```
