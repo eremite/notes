@@ -133,7 +133,7 @@ dpkg --get-selections | grep pattern
 
 ```bash
 gpg -c db.sql.gz # encrypt
-pgp -d db.sql.gz.gpg # decrypt
+gpg -d db.sql.gz.gpg > db.sql.gz # decrypt
 ```
 
 ## Restart delayed jobs based on current directory
