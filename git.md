@@ -211,6 +211,8 @@ git push origin :deleted_branch
 
 ### Temporarily rollback a deploy
 
+http://git-scm.com/blog/2010/03/02/undoing-merges.html
+
 ```bash
 git revert -m 1 $sha_of_merge_commit # To revert the merge
 git revert $sha_of_revert_commit # To put it back (revert the revert)
