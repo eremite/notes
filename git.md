@@ -208,3 +208,10 @@ http://gitready.com/beginner/2009/02/02/push-and-delete-branches.html
 ```bash
 git push origin :deleted_branch
 ```
+
+### Temporarily rollback a deploy
+
+```bash
+git revert -m 1 $sha_of_merge_commit # To revert the merge
+git revert $sha_of_revert_commit # To put it back (revert the revert)
+```
