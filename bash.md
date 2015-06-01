@@ -150,3 +150,8 @@ function rsdj {
 }
 ```
 
+## Start `less` without control characters and line numbers 
+
+```sh
+less --RAW-CONTROL-CHARS --line-numbers
+```
