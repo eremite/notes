@@ -24,7 +24,7 @@ mysql -u root -p $db -e "show tables" | grep -v Tables_in | grep -v "+" | awk '{
 ## Dump database
 
 ```bash
-mysqldump -u${DB_USERNAME} -h${DB_HOST} -p${DB_PASSWORD} ${DB_NAME} --single-transaction --quick | gzip > "$HOME/db.sql.gz"'
+mysqldump -u${DB_USERNAME} -h${DB_HOST} -p${DB_PASSWORD} ${DB_NAME} --single-transaction --quick | gzip > "$HOME/db.sql.gz"
 ```
 
 ## Load database
