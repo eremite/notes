@@ -155,3 +155,10 @@ function rsdj {
 ```sh
 less --RAW-CONTROL-CHARS --line-numbers
 ```
+
+## Debug running a program
+
+```sh
+export LD_DEBUG=files # or bindings, libs, versions
+program_to_debug
+```
