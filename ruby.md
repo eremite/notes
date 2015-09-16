@@ -40,3 +40,9 @@ DEFAULTS: &DEFAULTS
 base:
   <<: *DEFAULTS
 ```
+
+## Regex named capture groups
+
+```ruby
+'Widgets: 17'.match(/(?<name>.*):\s*(?<count>\d+)/)
+```
