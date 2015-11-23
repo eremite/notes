@@ -126,3 +126,9 @@ cp $META/templates/fig.yml .
 cp $META/templates/Dockerfile .
 cp $META/templates/database.yml config/
 ```
+
+## Generate a decimal migration with precision and scale
+
+```sh
+rails generate migration add_field_to_model 'field:decimal{8,2}'
+```
