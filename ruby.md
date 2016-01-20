@@ -17,21 +17,6 @@ Benchmark.bm do |bm|
 end;0
 ```
 
-## Installing a ruby (with brew and rbenv)
-
-```bash
-brew uninstall ruby-build && brew install --HEAD ruby-build
-rbenv install --list # See available versions
-rbenv install 3.0.0
-CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl) --with-readline-dir=$(brew --prefix readline)" rbenv install 2.0.0-p195 # with options
-```
-
-## Remove all gems
-
-```bash
-gem list | cut -d" " -f1 | xargs gem uninstall -aIx
-```
-
 ## Reuse YAML block
 
 ```yaml
