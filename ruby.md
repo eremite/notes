@@ -46,3 +46,11 @@ base:
 ```ruby
 'Widgets: 17'.match(/(?<name>.*):\s*(?<count>\d+)/)
 ```
+
+## Arbitrarily deep nested hash
+
+http://stackoverflow.com/a/19304522
+
+```ruby
+hash = Hash.new { |h,k| h[k] = Hash.new(&h.default_proc)
+```
