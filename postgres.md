@@ -8,12 +8,12 @@ pg_dump --clean --no-owner --username=db_user db_name | gzip -c > ~/db.sql.gz
 
 ## Kill all connections
 
-To fix "PGError: ERROR:  database "name_of_database" is being accessed by other users"
+To fix "PGError: ERROR:  database is being accessed by other users"
 
-https://gist.github.com/mattscilipoti/4455341/#comment-878446
+http://stackoverflow.com/a/12924735/167369
 
 ```bash
-psql -c "SELECT pid, pg_terminate_backend(pid) as terminated FROM pg_stat_activity WHERE pid <> pg_backend_pid();" -d 'name_of_database'
+SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE pid <> pg_backend_pid() AND datname='name_of_database';
 ```
 
 ## Console Commands
