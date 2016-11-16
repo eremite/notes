@@ -4,6 +4,11 @@
 
 http://git.chromium.org/gitweb/?p=chromiumos/platform/assets.git;a=blob;f=chromeapps/nassh/doc/faq.txt
 
-```bash
+```js
 term_.command.removeAllKnownHosts()
+```
+## Switch Color Theme From the Console
+
+```js
+term_.setProfile('light')
 ```
