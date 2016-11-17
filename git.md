@@ -217,3 +217,11 @@ http://git-scm.com/blog/2010/03/02/undoing-merges.html
 git revert -m 1 $sha_of_merge_commit # To revert the merge
 git revert $sha_of_revert_commit # To put it back (revert the revert)
 ```
+
+### git remote prune origin
+
+Not exactly sure what this does but I use it when tab completion keeps pulling up old branches I don't care about anymore.
+
+```bash
+git remote prune origin
+```
