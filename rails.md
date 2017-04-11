@@ -27,8 +27,14 @@ end
 ## SELECT DISTINCT field from Model
 
 ```ruby
-Model.uniq.pluck(:field)
-Model.scoped(:select => 'DISTINCT field').map(&:field)
+Model.distinct.pluck(:field)
+Model.scoped(:select => 'DISTINCT field').map(&:field) # Old verions of Rails
+```
+
+## Count records by field
+
+```ruby
+Model.group(:field).count(:field)
 ```
 
 ## Records with or without associations
