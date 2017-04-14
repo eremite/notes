@@ -134,7 +134,14 @@ cp $META/templates/database.yml config/
 ```
 
 ## Generate a decimal migration with precision and scale
-
 ```sh
 rails generate migration add_field_to_model 'field:decimal{8,2}'
+```
+
+## Manually manipulate schema_versions in the console
+
+http://stackoverflow.com/a/28446829/167369
+
+```ruby
+class SchemaMigration < ActiveRecord::Base; self.primary_key = :version; end
 ```
