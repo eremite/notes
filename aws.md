@@ -11,6 +11,12 @@ tail codedeploy-agent-deployments.log
 
 ## Elastic Beanstalk
 
+### App Directory
+
+```bash
+/var/app/current
+```
+
 ### Logs
 
 ```bash
