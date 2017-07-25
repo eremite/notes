@@ -162,3 +162,15 @@ less --RAW-CONTROL-CHARS --line-numbers
 export LD_DEBUG=files # or bindings, libs, versions
 program_to_debug
 ```
+
+## Get Public Key from Private
+
+```sh
+ssh-keygen -yf private_key_file > public_key_file
+```
+
+## Show fingerprint of public key file
+
+```sh
+ssh-keygen -lf public_key_file
+```
