@@ -145,6 +145,14 @@ git stash show -p
 git commit -v
 ```
 
+## How to search with the "pickaxe"
+
+http://www.philandstuff.com/2014/02/09/git-pickaxe.html
+
+```
+git log -S "search term"
+```
+
 ## Pull Requests
 
 ```bash
