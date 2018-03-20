@@ -25,25 +25,14 @@
 * In the navbar user dropdown choose "Switch Roles"
 * Account is the Account ID, Role is `custombit`
 
-## CodeDeploy
-
-### Deployment Logs
-
-```bash
-cd /opt/codedeploy-agent/deployment-root/deployment-logs
-tail codedeploy-agent-deployments.log
-```
-
 ## Elastic Beanstalk
 
-### App Directory
-
 ```bash
-/var/app/current
-```
-
-### Logs
-
-```bash
-less /var/log/eb-activity.log
+cd /var/app/current # Your application
+less /var/log/eb-activity.log # Elastic Beanstalk Activity logs
+tail -f /var/log/*.log /var/log/puma/*.log /var/log/nginx/*.log # Tail the logs
+cd /opt/elasticbeanstalk/hooks/ # See the automatic hooks
+/opt/elasticbeanstalk/bin/get-config container # List Elastic Beanstalk config
+/opt/elasticbeanstalk/bin/get-config container -k app_staging_dir # Get a specific value
+source $(/opt/elasticbeanstalk/bin/get-config container -k support_dir)/envvars # Load environment variables
 ```
