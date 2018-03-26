@@ -12,11 +12,13 @@ git diff @{1}..
 git checkout -f
 ```
 
-## Remove everything git doesn't know about.
+## Remove uncommitted files and directories
 
 ```bash
-git clean -f
+git clean -d -f
 ```
+
+https://stackoverflow.com/a/675797/167369
 
 ## Undo a commit
 
