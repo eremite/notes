@@ -36,3 +36,7 @@ cd /opt/elasticbeanstalk/hooks/ # See the automatic hooks
 /opt/elasticbeanstalk/bin/get-config container -k app_staging_dir # Get a specific value
 source $(/opt/elasticbeanstalk/bin/get-config container -k support_dir)/envvars # Load environment variables
 ```
+
+## How to get the instance id from within an ec2 instance?
+
+`wget -q -O - http://169.254.169.254/latest/meta-data/instance-id`
