@@ -145,3 +145,11 @@ http://stackoverflow.com/a/28446829/167369
 ```ruby
 class SchemaMigration < ActiveRecord::Base; self.primary_key = :version; end
 ```
+
+## Get current database connection config
+
+https://stackoverflow.com/questions/8673193
+
+```ruby
+ActiveRecord::Base.connection_config # or User.connection_config
+```
