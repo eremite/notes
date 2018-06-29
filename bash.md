@@ -90,10 +90,11 @@ sudo aptitude remove $old_kernel
 Redirect /payments https://www.mokisystems.com/payments
 ```
 
-## tar and gzip a directory
+## tar and gzip
 
 ```bash
-tar -czf filename.tar.gz directory
+tar -czf filename.tar.gz directory # Create
+tar -xzf filename.tar.gz # Extract
 ```
 
 ## Renew dhcp lease
