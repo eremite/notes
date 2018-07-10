@@ -28,13 +28,21 @@ end
 
 ```ruby
 Model.distinct.pluck(:field)
-Model.scoped(:select => 'DISTINCT field').map(&:field) # Old verions of Rails
 ```
 
 ## Count records by field
 
 ```ruby
 Model.group(:field).count(:field)
+```
+
+## Find records with duplicate fields
+
+```ruby
+duplicate_values = Model.group(:field).having(Model.arel_table[:field].count.gt(1)).count.keys
+Model.where(field: duplicate_values).group_by(&:field).each do |value, records|
+  puts "The records with ids #{records.map(&:id).to_sentence} have field set to #{value}"
+end
 ```
 
 ## Records with or without associations
