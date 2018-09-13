@@ -175,3 +175,10 @@ ssh-keygen -yf private_key_file > public_key_file
 ```sh
 ssh-keygen -lf public_key_file
 ```
+
+## Connect to Redis
+
+```sh
+nc -v redis.endpoint.com 6379
+ping
+```
