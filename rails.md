@@ -59,14 +59,10 @@ options = {
 
 ## SQL logging in the console
 
-http://stackoverflow.com/questions/1344232#answer-1576221
+https://stackoverflow.com/a/2936016/167369
 
 ```ruby
-# Turn SQL logging *on* in Rails 2
-ActiveRecord::Base.connection.instance_variable_set :@logger, Logger.new(STDOUT)
-
-# Turn SQL logging *off* in Rails 3
-ActiveRecord::Base.logger = nil
+ActiveRecord::Base.logger = Logger.new(STDOUT)
 ```
 
 ## Execute an arbitrary SQL query
