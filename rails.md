@@ -48,15 +48,6 @@ rake db:rollback STEP=2
 
 http://stackoverflow.com/a/4315729/167369
 
-## Some options to pass to guard for long running test suites
-
-```ruby
-options = {
-  :keep_failed => false,
-  :all_after_pass => false,
-}
-```
-
 ## SQL logging in the console
 
 https://stackoverflow.com/a/2936016/167369
@@ -71,49 +62,16 @@ ActiveRecord::Base.logger = Logger.new(STDOUT)
 ActiveRecord::Base.connection.exec_query('describe wires')
 ```
 
-## Migrate to the last migration on the master branch
+## Get current database connection config
 
-```bash
-bundle exec rake db:migrate VERSION=`git ls-tree --name-only --full-tree master:db/migrate | tail -n1`
-```
+https://stackoverflow.com/questions/8673193
 
-## List all rake tasks
-
-```
-rake -T # those with descriptions
-rake -P # all
-```
-
-## Starting a new project (with Docker)
-
-```bash
-APP=appname
-
-#docker run --rm -v $(pwd):/usr/src/$APP rails rails new /usr/src/$APP
-docker run --rm -it -e APP=$APP --volumes-from data rails bash --login
-gem install rails:4.2.0.beta4
-cd /data
-/usr/local/bundle/gems/railties-4.2.0.beta4/bin/rails new
-exit
-
-cd /data/$APP
-sudo chown -R dev:dev .
-git init
-mkdir -p $META/$APP/symlinks/.git
-touch $META/$APP/symlinks/notes.md
-mv .git/config $META/$APP/symlinks/.git/
-.git/hooks/create_symlinks
-
-git add .
-git commit -m "Initial commit of bare Rails app."
-
-cp $META/templates/dockerignore .dockerignore
-cp $META/templates/fig.yml .
-cp $META/templates/Dockerfile .
-cp $META/templates/database.yml config/
+```ruby
+ActiveRecord::Base.connection_config # or User.connection_config
 ```
 
 ## Generate a decimal migration with precision and scale
+
 ```sh
 rails generate migration add_field_to_model 'field:decimal{8,2}'
 ```
@@ -124,14 +82,6 @@ http://stackoverflow.com/a/28446829/167369
 
 ```ruby
 class SchemaMigration < ActiveRecord::Base; self.primary_key = :version; end
-```
-
-## Get current database connection config
-
-https://stackoverflow.com/questions/8673193
-
-```ruby
-ActiveRecord::Base.connection_config # or User.connection_config
 ```
 
 ## Process records in multiple threads
