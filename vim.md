@@ -51,3 +51,11 @@ Copy it back: 0"ay$
 * `%` - New file
 * `d` - New directory
 * `R` - Rename
+
+## Load all files with a given extension into the quickfix list
+
+http://vim.1045645.n5.nabble.com/quickfix-list-with-files-matching-only-filename-patterns-td1193082.html
+
+```VimL
+:cexpr substitute(glob("**/*.csv.haml"), '\n', ':1: &', 'g')
+```
