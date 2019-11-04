@@ -57,6 +57,13 @@ gco master
 git log --no-merges --abbrev-commit --pretty=format:"* %s" stable.. | awk '{gsub(/refs/,"see");print}'
 ```
 
+## Delete tags
+
+```bash
+git push --delete origin remote-tag 
+git tag --delete local-tag
+```
+
 ## Git Submodules
 
 [What is the Ideal Workflow?](http://blog.endpoint.com/2010/04/git-submodule-workflow.html)
