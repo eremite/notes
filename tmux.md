@@ -24,3 +24,9 @@ You'll have to stop running processes by hand.
 ```bash
 :kill-server
 ```
+
+## What does `M` mean in the pane list?
+
+It is marking the current pane for use by future commands. See `select-pane` in the manfile.
+
+You can unmark it with `prefix m`.
