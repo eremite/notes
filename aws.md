@@ -40,3 +40,23 @@ source $(/opt/elasticbeanstalk/bin/get-config container -k support_dir)/envvars 
 ## How to get the instance id from within an ec2 instance?
 
 `wget -q -O - http://169.254.169.254/latest/meta-data/instance-id`
+
+## CloudWatch Log Insights
+
+Requests that take longer than 75 seconds
+
+```
+fields @timestamp
+| parse @message " duration=* " as duration
+| parse @message " path=* " as path
+| parse @message "method=* " as method
+| sort @timestamp asc
+| filter duration > 75000
+```
+
+Count hits to a path within a 15 minute interval
+
+```
+filter @message like "path=/integrations"
+| stats count(*) as hits by bin(15m)
+```
