@@ -39,3 +39,13 @@ http://stackoverflow.com/a/19304522
 ```ruby
 hash = Hash.new { |h,k| h[k] = Hash.new(&h.default_proc)
 ```
+
+## Threads
+
+```ruby
+threads = []
+5.times {
+  threads << Thread.new { puts "Do work" }
+}
+threads.each(&:join)
+```
