@@ -6,6 +6,13 @@
 pg_dump --clean --no-owner --username=db_user db_name | gzip -c > ~/db.sql.gz
 ```
 
+## Export to CSV
+
+```bash
+psql postgresql://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}${DB_PORT}/${DB_NAME}
+\COPY departments TO '/tmp/departments.csv' WITH (FORMAT CSV, HEADER)
+```
+
 ## Kill all connections
 
 To fix "PGError: ERROR:  database is being accessed by other users"
