@@ -12,6 +12,14 @@ Model.distinct.pluck(:field)
 Model.group(:field).count(:field)
 ```
 
+## Count associated records
+
+https://stackoverflow.com/a/47566622
+
+```ruby
+Comment.joins(:post).group(:post_id).count(:post_id)
+```
+
 ## Find records with duplicate fields
 
 ```ruby
