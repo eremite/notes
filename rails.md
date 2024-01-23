@@ -75,6 +75,8 @@ ActiveRecord::Base.connection.exec_query('describe wires')
 https://stackoverflow.com/questions/8673193
 
 ```ruby
+ActiveRecord::Base.connection_db_config.configuration_hash
+# Before Rails 6.2
 ActiveRecord::Base.connection_config # or User.connection_config
 ```
 
